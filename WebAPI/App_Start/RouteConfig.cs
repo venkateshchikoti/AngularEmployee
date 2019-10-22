@@ -12,6 +12,11 @@ namespace WebAPI
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            
+            routes.MapRoute(  
+                name: "about",  
+                url: "Home/About-WDI",  
+                defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional }
 
             routes.MapRoute(
                 name: "Default",
